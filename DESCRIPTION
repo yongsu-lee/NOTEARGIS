@@ -20,3 +20,5 @@ Depends: R (>= 3.5.0)
 LinkingTo: 
     Rcpp,
     RcppArmadillo
+URL: https://github.com/yongsu-lee/noteargis
+BugReports: https://github.com/yongsu-lee/noteargis/issues
