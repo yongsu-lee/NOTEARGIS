@@ -2,7 +2,7 @@
 % Please edit documentation in R/noteargis.R
 \name{noteargis}
 \alias{noteargis}
-\title{Title}
+\title{Learning a sparse DAG using group-structure data}
 \usage{
 noteargis(
   data_input,
@@ -19,31 +19,31 @@ noteargis(
 )
 }
 \arguments{
-\item{data_input}{blah}
+\item{data_input}{a data.frame with attributes \code{data_type} and either \code{n_levels} or \code{n_grp_elmts}. Check \code{NOTEARGIS::gen_data} for details.}
 
-\item{data_type}{blah}
+\item{data_type}{a character vector, elements consist of either "c" or "m" indicating continuous variable and multinomial response, respectively.}
 
-\item{n_resps_by_node}{blah}
+\item{n_resps_by_node}{positive integers vector, a list of numbers of elements for each group or numbers of levels for each multinomial variable.}
 
-\item{intcpt}{blah}
+\item{intcpt}{intercept terms will be included if "always" and will be excluded if "none".}
 
-\item{lambdas}{blah}
+\item{lambdas}{a double vector, user specified tuning parameter sequence. Typical usage is to have the function compute its own list of tuning parameters based on \code{n_lams} (and internal function \code{gen_lambdas}). Do not recommend to supply this argument. Default is \code{NA}.}
 
-\item{n_lams}{blah}
+\item{n_lams}{a positive integer, the number of seuqences of tuning parameters. Default is \code{30}.}
 
-\item{admm_args}{blah}
+\item{admm_args}{a list of value, to customize the several arguments for ADMM algorithm. See \code{?admm_arg_ctrl} for details.}
 
-\item{add_stop_rule}{blah}
+\item{add_stop_rule}{a logical scalar, if \code{add_stop_rule = TRUE}, the function will stop proceed fitting if the number of estimated edges are larger than \code{3*n_nodes}. Default is \code{TRUE}.}
 
-\item{fac_grp_lasso}{blah}
+\item{fac_grp_lasso}{a logical scalar, if \code{fac_grp_lasso = TRUE}, square-root of number of parameters will be considered as the multiplied factor in the group lasso update. Default is \code{FALSE}.}
 
-\item{verbose}{blah}
+\item{verbose}{a logical scalar, if \code{verbose = TRUE} you can see fitting status message in the console window. Default is \code{FALSE}.}
 
-\item{fit_hist}{blah}
+\item{fit_hist}{a logical scalar, if \code{verbose = TRUE} function returns all the parameters at each step of the ADMM loop. Do not recommend. Default is \code{FALSE}.}
 }
 \value{
 blah blah
 }
 \description{
-Title
+Learning a sparse DAG using group-structure data
 }

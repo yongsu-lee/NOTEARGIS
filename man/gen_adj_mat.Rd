@@ -18,11 +18,11 @@ gen_adj_mat(
 \item{seed}{integer scalar, in order to reproduce the same graph.}
 }
 \value{
-\item{A_true}{a corresponding adjacecny matrix of the \code{graph_true}}
+\item{A_true}{an adjacency matrix of the \code{graph_true}}
 }
 \description{
 Generate a desired graph (with \code{igraph} format) with corresponding adjacency matrix as an binary matrix. If \eqn{(i,j)} is one, it implies there exists an edge \eqn{i -> j}.
 }
 \details{
-There are seven graph types in the simulation studies: "bi" for Bipartite graph, "sf" for Scale-Free graph, "star" for Star-Out graph, "sw" for Small-World, "tree" for the tree with two childeren, "rand" for random DAG, and "chain" for a Chain graph. Except "rand" and "chain", all the other graphs generated based on R package \strong{igraph}. The Random DAG is generaated based on R package \strong{pcalg}.
+There are seven graph types in the simulation studies: "bi" for Bipartite graph, "sf" for Scale-Free graph, "sw" for Small-World, "tree" for the tree with two children, "rand" for random DAG, and "chain" for a Chain graph. Except "rand", all the other graphs generated based on R package \strong{igraph}. The Random DAG is generated based on R package \strong{pcalg}.
 }

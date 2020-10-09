@@ -1,16 +1,16 @@
-#' Title
+#' Learning a sparse DAG using group-structure data
 #'
-#' @param data_input blah
-#' @param data_type blah
-#' @param n_resps_by_node blah
-#' @param intcpt blah
-#' @param lambdas blah
-#' @param n_lams blah
-#' @param admm_args blah
-#' @param add_stop_rule blah
-#' @param fac_grp_lasso blah
-#' @param verbose blah
-#' @param fit_hist blah
+#' @param data_input a data.frame with attributes \code{data_type} and either \code{n_levels} or \code{n_grp_elmts}. Check \code{NOTEARGIS::gen_data} for details.
+#' @param data_type a character vector, elements consist of either "c" or "m" indicating continuous variable and multinomial response, respectively.
+#' @param n_resps_by_node positive integers vector, a list of numbers of elements for each group or numbers of levels for each multinomial variable.
+#' @param intcpt intercept terms will be included if "always" and will be excluded if "none".
+#' @param lambdas a double vector, user specified tuning parameter sequence. Typical usage is to have the function compute its own list of tuning parameters based on \code{n_lams} (and internal function \code{gen_lambdas}). Do not recommend to supply this argument. Default is \code{NA}.
+#' @param n_lams a positive integer, the number of seuqences of tuning parameters. Default is \code{30}.
+#' @param admm_args a list of value, to customize the several arguments for ADMM algorithm. See \code{?admm_arg_ctrl} for details.
+#' @param add_stop_rule a logical scalar, if \code{add_stop_rule = TRUE}, the function will stop proceed fitting if the number of estimated edges are larger than \code{3*n_nodes}. Default is \code{TRUE}.
+#' @param fac_grp_lasso a logical scalar, if \code{fac_grp_lasso = TRUE}, square-root of number of parameters will be considered as the multiplied factor in the group lasso update. Default is \code{FALSE}.
+#' @param verbose a logical scalar, if \code{verbose = TRUE} you can see fitting status message in the console window. Default is \code{FALSE}.
+#' @param fit_hist a logical scalar, if \code{verbose = TRUE} function returns all the parameters at each step of the ADMM loop. Do not recommend. Default is \code{FALSE}.
 #'
 #' @return blah blah
 #' @export

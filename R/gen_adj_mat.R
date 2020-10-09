@@ -6,11 +6,11 @@
 #' @param graph_type character scalar, one of types of graphs in the simulation studies. See details below for more information.
 #' @param seed integer scalar, in order to reproduce the same graph.
 #'
-#' @return \item{A_true}{a corresponding adjacecny matrix of the \code{graph_true}}
+#' @return \item{A_true}{an adjacency matrix of the \code{graph_true}}
 #'
 #' @export
 #' @import igraph pcalg
-#' @details There are seven graph types in the simulation studies: "bi" for Bipartite graph, "sf" for Scale-Free graph, "star" for Star-Out graph, "sw" for Small-World, "tree" for the tree with two childeren, "rand" for random DAG, and "chain" for a Chain graph. Except "rand" and "chain", all the other graphs generated based on R package \strong{igraph}. The Random DAG is generaated based on R package \strong{pcalg}.
+#' @details There are seven graph types in the simulation studies: "bi" for Bipartite graph, "sf" for Scale-Free graph, "sw" for Small-World, "tree" for the tree with two children, "rand" for random DAG, and "chain" for a Chain graph. Except "rand", all the other graphs generated based on R package \strong{igraph}. The Random DAG is generated based on R package \strong{pcalg}.
 gen_adj_mat=function(n_nodes, graph_type=c("bi","rand","sf","sw","tree"), seed=NA){
 
   graph_type = match.arg(graph_type)
