@@ -1,6 +1,6 @@
 Package: noteargis
 Type: Package
-Title: Learn Directed Acyclic Graphs from Group-Structure Data
+Title: Learn Directed Acyclic Graphs from Grouped Variables
 Version: 1.2.0
 Author: Yongsu Lee, Chunming Zhang
 Maintainer: Yongsu Lee <yongsulee@stat.wisc.edu>
