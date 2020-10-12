@@ -1,4 +1,4 @@
-#' Learning a sparse DAG using group-structure data
+#' Learning a sparse DAG with Grouped Variables
 #'
 #' @param data_input a data.frame with attributes \code{data_type} and either \code{n_levels} or \code{n_grp_elmts}. Check \code{NOTEARGIS::gen_data} for details.
 #' @param data_type a character vector, elements consist of either "c" or "m" indicating continuous variable and multinomial response, respectively.
@@ -12,7 +12,7 @@
 #' @param verbose a logical scalar, if \code{verbose = TRUE} you can see fitting status message in the console window. Default is \code{FALSE}.
 #' @param fit_hist a logical scalar, if \code{verbose = TRUE} function returns all the parameters at each step of the ADMM loop. Do not recommend. Default is \code{FALSE}.
 #'
-#' @return blah blah
+#' @return An object with S3 class \code{"noteargis"} \item{A_est_by_lam}{A list of estimated adjacency matrices over the pathwise solutions. \code{graph_est} is saved as an attribute for each pathwise solution.} \item{Beta_new_by_lam}{A list of Beta estimates over the pathwise solutions.} \item{W_new_by_lam}{A list of W estimates over the pathwise solutions.} \item{lambdas}{A list of tuning parameters used for fitting all the pathwise solutions}\item{history_W_by_lam}{(if \code{history = TRUE}) A list of W estimates for each step of ADMM over the pathwise solutions.} \item{history_Beta_by_lam}{(if \code{history = TRUE}) A list of Beta estimates for each step of ADMM over the pathwise solutions.}
 #' @export
 #'
 noteargis = function(data_input, data_type = c("c","m"),

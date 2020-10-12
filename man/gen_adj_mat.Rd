@@ -11,7 +11,7 @@ gen_adj_mat(
 )
 }
 \arguments{
-\item{n_nodes}{positive integer scalar (larger than 1), the number of nodes of the desired graph.}
+\item{n_nodes}{positive integer scalar (larger than 1), the number of nodes of the desired graph. For the Bipartite graph, it should be even.}
 
 \item{graph_type}{character scalar, one of types of graphs in the simulation studies. See details below for more information.}
 

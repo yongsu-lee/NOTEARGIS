@@ -2,7 +2,7 @@
 % Please edit documentation in R/noteargis.R
 \name{noteargis}
 \alias{noteargis}
-\title{Learning a sparse DAG using group-structure data}
+\title{Learning a sparse DAG with Grouped Variables}
 \usage{
 noteargis(
   data_input,
@@ -42,8 +42,8 @@ noteargis(
 \item{fit_hist}{a logical scalar, if \code{verbose = TRUE} function returns all the parameters at each step of the ADMM loop. Do not recommend. Default is \code{FALSE}.}
 }
 \value{
-blah blah
+An object with S3 class \code{"noteargis"} \item{A_est_by_lam}{A list of estimated adjacency matrices over the pathwise solutions. \code{graph_est} is saved as an attribute for each pathwise solution.} \item{Beta_new_by_lam}{A list of Beta estimates over the pathwise solutions.} \item{W_new_by_lam}{A list of W estimates over the pathwise solutions.} \item{lambdas}{A list of tuning parameters used for fitting all the pathwise solutions}\item{history_W_by_lam}{(if \code{history = TRUE}) A list of W estimates for each step of ADMM over the pathwise solutions.} \item{history_Beta_by_lam}{(if \code{history = TRUE}) A list of Beta estimates for each step of ADMM over the pathwise solutions.}
 }
 \description{
-Learning a sparse DAG using group-structure data
+Learning a sparse DAG with Grouped Variables
 }

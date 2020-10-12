@@ -1,10 +1,10 @@
 Package: noteargis
 Type: Package
-Title: Learn Directed Acyclic Graphs from Grouped Variables
+Title: Learn Directed Acyclic Graphs with Grouped Variables
 Version: 1.2.0
 Author: Yongsu Lee, Chunming Zhang
 Maintainer: Yongsu Lee <yongsulee@stat.wisc.edu>
-Description: Learning DAGs with grouped variables using either groupedcontinuous or multinomial variables. More details will be desribed in Lee and Zhang (20??).
+Description: Learning DAGs with grouped variables using either grouped continuous or multinomial variables. More details will be desribed in Lee and Zhang (20??).
 License: GPL-3
 Encoding: UTF-8
 LazyData: true

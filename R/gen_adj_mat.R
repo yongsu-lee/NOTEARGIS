@@ -2,7 +2,7 @@
 #'
 #' @description Generate a desired graph (with \code{igraph} format) with corresponding adjacency matrix as an binary matrix. If \eqn{(i,j)} is one, it implies there exists an edge \eqn{i -> j}.
 #'
-#' @param n_nodes positive integer scalar (larger than 1), the number of nodes of the desired graph.
+#' @param n_nodes positive integer scalar (larger than 1), the number of nodes of the desired graph. For the Bipartite graph, it should be even.
 #' @param graph_type character scalar, one of types of graphs in the simulation studies. See details below for more information.
 #' @param seed integer scalar, in order to reproduce the same graph.
 #'
@@ -15,6 +15,10 @@ gen_adj_mat=function(n_nodes, graph_type=c("bi","rand","sf","sw","tree"), seed=N
 
   graph_type = match.arg(graph_type)
   if (is.na(seed)) seed = 1
+
+  if (graph_type == "bi" & (n_nodes %% 2 == 1) ) {
+    stop ("Number of nodes should be even for Bipartitie graph.")
+  }
 
   if (n_nodes == 2){
     A_true = matrix(c(0,0,1,0), 2, 2)
